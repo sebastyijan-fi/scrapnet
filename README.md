@@ -39,7 +39,7 @@ The website hosts the knowledge, the app is the bridge and devices are limited o
 ## 4 · Current Phase
 
 * Researching best practices, tech stack and open standards.
-* Target for first public repo and skeleton site: **Q3 2025**.
+* Target for first public repo and skeleton site: **Q1 2026**.
 * Proof‑of‑concept gadget: BLE button to validate the pipeline (specs to be decided).
 
 ---
