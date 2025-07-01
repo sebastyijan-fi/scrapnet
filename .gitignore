@@ -1,0 +1,25 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Node workspaces (catch any stray installs)
+**/node_modules/
+**/dist/
+**/.turbo/
+
+# Logs
+*.log
+
+# Env files
+.env
+.env.*.local
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Build artifacts
+*.tgz
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
