@@ -1,16 +1,93 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import NavBar from "../components/NavBar.svelte";
+import Footer from "../components/Footer.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+	title="ScrapNet"
+	description="ScrapNet is an open, licence-friendly library of printable gadgets, firmware, and prompt packs."
+>
+	<NavBar />
+
+	<a href="#main" class="sr-only focus:not-sr-only p-4">Skip to main content</a>
+
+	<main
+		id="main"
+		class="container mx-auto px-4 sm:px-6 lg:px-8 pt-[4.5rem] space-y-16"
+	>
+		<!-- Hero -->
+		<section class="text-center">
+			<img src="/logo.png" alt="ScrapNet logo" class="mx-auto w-12 h-12" />
+			<h1 class="font-mono text-5xl sm:text-6xl mt-4">ScrapNet</h1>
+			<p class="mt-4 max-w-2xl mx-auto text-lg">
+				A public library of printable hardware designs, firmware, and prompt
+				packs—shared without paywalls or ranking boards.
+			</p>
+		</section>
+
+		<!-- What is ScrapNet? -->
+		<section id="about" class="space-y-4">
+			<h2 class="font-mono text-3xl">What&nbsp;is&nbsp;ScrapNet?</h2>
+			<p>
+				ScrapNet hosts raw files—STLs, schematics, firmware builds, and prompt
+				snippets—in one permissively licensed catalogue. Anyone can download,
+				print, flash, or remix without requesting access or handing over
+				personal data.
+			</p>
+		</section>
+
+		<!-- Thesis Prototype -->
+		<section id="prototype" class="space-y-4">
+			<h2 class="font-mono text-3xl">Thesis Prototype: BLE Button</h2>
+
+			<p>The first reference gadget illustrates the entire ScrapNet flow:</p>
+
+			<ul class="list-disc list-inside pl-4 space-y-1">
+				<li>
+					<strong>Housing —</strong> 3-D-printable case, coin-cell powered.
+				</li>
+				<li>
+					<strong>Electronics —</strong> off-the-shelf BLE module with open firmware.
+				</li>
+				<li>
+					<strong>Mobile bridge —</strong> beta Android app (Play Store closed test).
+				</li>
+				<li>
+					<strong>BYOK —</strong> button events forwarded to <u
+						>any cloud AI API</u
+					> you configure (OpenAI, Claude, etc.).
+				</li>
+			</ul>
+
+			<p>Suggested default press patterns (fully editable in firmware):</p>
+			<ul class="list-disc list-inside pl-4 space-y-1">
+				<li><strong>Single press —</strong> begin voice query.</li>
+				<li><strong>Double press —</strong> stop response early.</li>
+				<li><strong>Long press —</strong> clear context.</li>
+			</ul>
+		</section>
+
+		<!-- Roadmap -->
+		<section id="roadmap" class="space-y-4">
+			<h2 class="font-mono text-3xl">Next&nbsp;Milestones</h2>
+			<ul class="list-disc list-inside pl-4 space-y-1">
+				<li>
+					Publish STL, schematic &amp; firmware for the BLE button — Q4 2025
+				</li>
+				<li>Release Android relay app (closed beta → public APK)</li>
+				<li>
+					Open catalogue for additional printable tools &amp; prompt packs
+				</li>
+			</ul>
+		</section>
+
+		<!-- Footer note -->
+		<section class="text-center text-sm italic">
+			This page will grow the moment the first files are live. No accounts, no
+			cookies—just downloads.
+		</section>
+	</main>
+
+	<Footer />
+</BaseLayout>

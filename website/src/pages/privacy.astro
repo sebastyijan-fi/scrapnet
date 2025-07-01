@@ -1,0 +1,148 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import NavBar from "../components/NavBar.svelte";
+import Footer from "../components/Footer.astro";
+
+const pageTitle = "Privacy Policy";
+const pageDesc =
+  "Learn how ScrapNet collects, uses, and protects your data in compliance with GDPR.";
+---
+
+<BaseLayout title={pageTitle} description={pageDesc}>
+  <NavBar />
+
+  <!-- Skip-link for keyboard users -->
+  <a href="#main-content" class="sr-only focus:not-sr-only p-4"
+    >Skip to main content</a
+  >
+
+  <main
+    id="main-content"
+    class="container mx-auto px-4 sm:px-6 lg:px-8 pt-[4.5rem] space-y-12 pb-12"
+  >
+    <!-- Page header -->
+    <header class="text-center space-y-2">
+      <h1 class="font-mono text-5xl sm:text-6xl">Privacy Policy</h1>
+      <p class="text-sm italic">Last updated: 1 July 2025</p>
+    </header>
+
+    <!-- 1 · Introduction -->
+    <section
+      id="introduction"
+      aria-labelledby="introduction-heading"
+      class="border-l-4 border-[var(--accent)] pl-4 space-y-4"
+    >
+      <h2 id="introduction-heading" class="font-mono text-3xl sm:text-4xl">
+        1 · Introduction
+      </h2>
+      <p class="text-base sm:text-lg leading-relaxed">
+        ScrapNet is a public library of printable designs and firmware with no
+        requirement for accounts or personal data. This policy explains the
+        minimal data flows involved.
+      </p>
+    </section>
+
+    <!-- 2 · Data We Collect -->
+    <section
+      id="data-we-collect"
+      aria-labelledby="data-we-collect-heading"
+      class="border-l-4 border-[var(--accent)] pl-4 space-y-4"
+    >
+      <h2 id="data-we-collect-heading" class="font-mono text-3xl sm:text-4xl">
+        2 · Data We Collect
+      </h2>
+      <ul class="list-disc list-inside space-y-2 text-base sm:text-lg">
+        <li>
+          <strong>No analytics:</strong> We do not run any tracking scripts.
+        </li>
+        <li>
+          <strong>No cookies:</strong> We set no cookies except those strictly required
+          by your browser.
+        </li>
+        <li>
+          <strong>Server logs:</strong> Cloudflare logs requests (IP, timestamp,
+          URL), but we never retrieve or analyse them.
+        </li>
+      </ul>
+    </section>
+
+    <!-- 3 · Third-Party Services -->
+    <section
+      id="third-party-services"
+      aria-labelledby="third-party-services-heading"
+      class="border-l-4 border-[var(--accent)] pl-4 space-y-4"
+    >
+      <h2
+        id="third-party-services-heading"
+        class="font-mono text-3xl sm:text-4xl"
+      >
+        3 · Third-Party Services
+      </h2>
+      <ul class="list-disc list-inside space-y-2 text-base sm:text-lg">
+        <li>
+          <strong>Cloudflare:</strong> Provides DNS, CDN & TLS.
+          <a
+            href="https://www.cloudflare.com/privacypolicy/"
+            target="_blank"
+            rel="noopener"
+          >
+            Privacy Policy
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 4 · Your Rights (GDPR) -->
+    <section
+      id="your-rights"
+      aria-labelledby="your-rights-heading"
+      class="border-l-4 border-[var(--accent)] pl-4 space-y-4"
+    >
+      <h2 id="your-rights-heading" class="font-mono text-3xl sm:text-4xl">
+        4 · Your Rights (GDPR)
+      </h2>
+      <ul class="list-disc list-inside space-y-2 text-base sm:text-lg">
+        <li>Access or correct any data we hold (we hold none).</li>
+        <li>Erase any data we hold (we hold none).</li>
+        <li>
+          Restrict or object to processing (we do not process personal data).
+        </li>
+        <li>Data portability.</li>
+        <li>Lodge a complaint with your data protection authority.</li>
+      </ul>
+      <p class="text-base sm:text-lg leading-relaxed">
+        To exercise these rights or ask privacy questions,
+        <a
+          href="https://github.com/sebastyijan-fi/scrapnet/issues"
+          target="_blank"
+          rel="noopener"
+        >
+          open an issue on GitHub
+        </a>.
+      </p>
+    </section>
+
+    <!-- 5 · Changes to This Policy -->
+    <section
+      id="changes-to-policy"
+      aria-labelledby="changes-to-policy-heading"
+      class="border-l-4 border-[var(--accent)] pl-4 space-y-4"
+    >
+      <h2 id="changes-to-policy-heading" class="font-mono text-3xl sm:text-4xl">
+        5 · Changes to This Policy
+      </h2>
+      <p class="text-base sm:text-lg leading-relaxed">
+        This policy may be updated occasionally. The “Last updated” date above
+        will reflect any changes. Major revisions will be noted in GitHub
+        issues.
+      </p>
+    </section>
+
+    <!-- No-tracking footer note -->
+    <section class="text-center text-sm italic pt-8">
+      No accounts, no cookies, no analytics—only downloads.
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
