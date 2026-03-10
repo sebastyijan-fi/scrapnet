@@ -1,25 +1,55 @@
-# OS
+# OS / editor noise
 .DS_Store
 Thumbs.db
 
-# Node workspaces (catch any stray installs)
-**/node_modules/
-**/dist/
-**/.turbo/
-
-# Logs
-*.log
-
-# Env files
-.env
-.env.*.local
-
-# IDE / Editor
+# IDE / editors
 .vscode/
 .idea/
+*.swp
+*~
 
-# Build artifacts
-*.tgz
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Environment
+.env
+.env.*
+
+# Python
+.venv/
+venv/
+.venv311/
+.venv313/
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Node / JS
+node_modules/
+.npm/
+.pnpm-store/
+.yarn/
+.next/
+.nuxt/
+.turbo/
+out/
+dist/
+build/
+coverage/
+
+# Go / compiled outputs
+bin/
+*.test
+*.out
+*.exe
+
+# Rust
+/target/
+
+# Runtime data / logs
+*.log
+logs/
+tmp/
+temp/
